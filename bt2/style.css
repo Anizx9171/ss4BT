@@ -1,0 +1,27 @@
+.slider {
+    background: red;
+    color: white;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.slider {
+    -webkit-scroll-snap-points-x: repeat(300px);
+    -ms-scroll-snap-points-x: repeat(300px);
+    scroll-snap-points-x: repeat(300px);
+    -webkit-scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+}
+
+.slides>div:target {
+    transform: scale(0.8);
+}
